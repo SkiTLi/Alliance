@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Альянс</string>
+    <string name="text_button2">Страница Рзработчика</string>
+    <string name="text_button6">Оценить</string>
+    <string name="text_button5">Поделиться</string>
+    <string name="text_button1and4">Далее</string>
+    <string name="text_button7">Не понравилось</string>
+    <string name="text_button8">Понравилось</string>
+    <string name="text_button9">Спасибо!</string>
+    <string name="text_button10">Получить бонус</string>
+    <string name="text_button3and11">Загрузить</string>
+    <string name="text_button12">Все супер!</string>
+    <string name="text_view1">Текст1</string>
+    <string name="text_view3">Текст3</string>
+
+
+</resources>

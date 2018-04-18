@@ -1,0 +1,28 @@
+<resources>
+    <string name="developer_page">https://play.google.com/store/apps/developer?id=beldroid</string>
+    <string name="app_link">
+        https://play.google.com/store/apps/details?id=beldroid.widget.spiritofchristmas</string>
+
+    <string name="app_name">Alliance</string>
+    <string name="text_button2">Developer page</string>
+    <string name="text_button5">Share</string>
+    <string name="text_button6">Vote</string>
+    <string name="text_button1and4">Next</string>
+    <string name="text_button3and11">Download</string>
+    <string name="text_button7">Dislike</string>
+    <string name="text_button8">Like</string>
+    <string name="text_button9">Thanks!</string>
+    <string name="text_button10">Get a bonus</string>
+    <string name="text_button12">All great</string>
+
+
+    <string name="text_view1">Text1</string>
+    <string name="text_view3">Text3</string>
+    <string name="text_view2">Text2 \n
+        1. Line1 \n
+        2. Line2 \n
+        3. Line3 \n
+    </string>
+
+
+</resources>

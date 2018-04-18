@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+    <style name="ButtonSktlNoBackgound" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+        <item name="colorButtonNormal">#1a237e</item>
+        <item name="colorControlHighlight">#40b73a</item>
+        <item name="android:textSize">8dp</item>
+    </style>
+
+
+    <style name="ButtonSktl" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/Red</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">8dp</item>
+    </style>
+
+
+    <style name="ImageSktl" parent="Base.TextAppearance.AppCompat">
+
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:adjustViewBounds">true</item>
+
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+
+        <item name="colorButtonNormal">@color/Red</item>
+        <item name="android:textColor">@color/White</item>
+
+    </style>
+
+    <style name="TextSktl" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+
+        <item name="android:textSize">20dp</item>
+    </style>
+
+
+</resources>
