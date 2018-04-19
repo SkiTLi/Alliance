@@ -9,9 +9,12 @@ import com.google.android.gms.ads.AdView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
+import com.google.android.gms.ads.InterstitialAd;
 public class Activity2 extends Bar {
+
     private AdView mAdView;
+    InterstitialAd mInterstitialAd;
+
     @BindView(R.id.image_view2)
     ImageView mImageView2;
 
@@ -30,6 +33,9 @@ public class Activity2 extends Bar {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
     }
 
@@ -37,6 +43,7 @@ public class Activity2 extends Bar {
     public void toActivity3() {
         Intent intent = new Intent(this, Activity3.class);
         startActivity(intent);
+        mInterstitialAd.show();
     }
 
 

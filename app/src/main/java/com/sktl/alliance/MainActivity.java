@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -14,10 +14,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static java.lang.Thread.sleep;
+
 public class MainActivity extends Bar {
 
-
     private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
     @BindView(R.id.image_view1)
     ImageView mImageView1;
@@ -43,6 +45,12 @@ public class MainActivity extends Bar {
                 .build();
         mAdView.loadAd(adRequest);
 
+//        MobileAds.initialize(this,
+//                "ca-app-pub-3940256099942544~3347511713");
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         mButton22.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +63,11 @@ public class MainActivity extends Bar {
     @OnClick(R.id.button1)
     public void toActivity2() {
         Intent intent = new Intent(this, Activity2.class);
+
+
         startActivity(intent);
+        mInterstitialAd.show();
+
     }
 
 
