@@ -24,7 +24,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -32,6 +33,8 @@ import butterknife.OnClick;
 import static java.lang.Thread.sleep;
 
 public class Activity3 extends Bar {
+
+    private AdView mAdView;
 
     @BindView(R.id.image_view3)
     ImageView mImageView3;
@@ -56,6 +59,11 @@ public class Activity3 extends Bar {
         setContentView(R.layout.activity3);
 
         ButterKnife.bind(this);
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         mButton22.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -200,6 +208,26 @@ public class Activity3 extends Bar {
     private boolean deleteZip(String pathToZip, String zipName) {
         File file = new File(pathToZip + File.separator + zipName);
         return file.delete();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mAdView.resume();
+    }
+
+    @Override
+    protected void onPause() {
+        mAdView.pause();
+        super.onPause();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        mAdView.destroy();
+        super.onDestroy();
+
     }
 
 }
