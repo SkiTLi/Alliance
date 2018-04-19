@@ -1,5 +1,6 @@
 package com.sktl.alliance;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -7,6 +8,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class Activity4 extends Bar {
 
@@ -16,8 +18,6 @@ public class Activity4 extends Bar {
     @BindView(R.id.text_view1)
     TextView mTextView1;
 
-    @BindView(R.id.button11)
-    Button mButton11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +25,12 @@ public class Activity4 extends Bar {
         setContentView(R.layout.activity4);
 
         ButterKnife.bind(this);
+    }
+
+
+    @OnClick(R.id.button11)
+    public void toActivity3() {
+        Intent intent = new Intent(this, PopUp3.class);
+        startActivity(intent);
     }
 }

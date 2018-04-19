@@ -33,7 +33,10 @@
             android:name=".PopUp2"
             android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Dialog" />
-
+        <activity
+            android:name=".PopUp3"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Dialog" />
     </application>
 
 </manifest>
